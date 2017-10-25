@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 
@@ -11,30 +11,28 @@
 
 	<link rel="icon" href="images/favicon.ico">
 
-	<title>Bootstrap + git</title>
+	<title>Nueva Nota</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!--Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
     <!-- Icons -->
     <link href="css/font-awesome.css" rel="stylesheet">
 
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-		<style media="screen">
-			.btn{
-				float: right;
-				margin-left: 2%;
-			}
+    <style media="screen">
+        .titulo{
+          font-weight: bold;
+        }
 
-			.btnAñadir{
-				margin-left: 5%;
-				margin-bottom: 10%;
-			}
-		</style>
+        .btn{
+  				float: right;
+  			}
+    </style>
 </head>
 <body>
 	<div class="container-fluid" id="wrapper">
@@ -45,8 +43,8 @@
 				<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><em class="fa fa-bars"></em></a>
 
 				<ul class="nav nav-pills flex-column sidebar-nav">
-					<li class="nav-item"><a class="nav-link active" href="index.html"><em class="fa fa-dashboard"></em> Dashboard <span class="sr-only">(current)</span></a></li>
-					<li class="nav-item"><a class="nav-link" href="widgets.html"><em class="fa fa-calendar-o"></em> Widgets</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html"><em class="fa fa-dashboard"></em> Dashboard</a></li>
+					<li class="nav-item"><a class="nav-link active" href="widgets.html"><em class="fa fa-calendar-o"></em> Widgets <span class="sr-only">(current)</span></a></li>
 					<li class="nav-item"><a class="nav-link" href="charts.html"><em class="fa fa-bar-chart"></em> Charts</a></li>
 					<li class="nav-item"><a class="nav-link" href="elements.html"><em class="fa fa-hand-o-up"></em> UI Elements</a></li>
 					<li class="nav-item"><a class="nav-link" href="cards.html"><em class="fa fa-clone"></em> Cards</a></li>
@@ -57,7 +55,7 @@
 			<main class="col-xs-12 col-sm-8 offset-sm-4 col-lg-9 offset-lg-3 col-xl-10 offset-xl-2 pt-3 pl-4">
 				<header class="page-header row justify-center">
 					<div class="col-md-6 col-lg-8" >
-						<h1 class="float-left text-center text-md-left">DamKeep</h1>
+						<h1 class="float-left text-center text-md-left">Widgets</h1>
 					</div>
 
 					<div class="dropdown user-dropdown col-md-6 col-lg-4 text-center text-md-right"><a class="btn btn-stripped dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -79,56 +77,49 @@
 				</header>
 
 				<section class="row">
-					<!-- Añadir una nueva nota -->
-					<a href="nuevanota.html"><button type="button" class="btn btn-primary btnAñadir"><i class="fa fa-plus" aria-hidden="true"></i> Añadir nueva nota</button></a>
 					<div class="col-sm-12">
 						<section class="row">
-							<div class="col-md-12 col-lg-3">
 
+              <div class="col-sm-12 col-md-2"></div>
+
+							<div class="col-sm-12 col-md-8">
 								<div class="card mb-4">
 									<div class="card-block">
-										<h3 class="card-title">Titulo 1</h3>
-										<p>Contenido de la nota</p>
-											<button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
-											<button type="button" class="btn btn-info btn-xs"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</button>
+										<h3 class="card-title">Crear nueva nota</h3>
+
+										<form class="form-horizontal" action="" method="post">
+											<fieldset>
+												<!-- Name input-->
+												<div class="form-group">
+													<label class="col-12 control-label no-padding titulo" for="name">Nombre de la nota</label>
+
+													<div class="col-12 no-padding">
+														<input id="name" name="name" type="text" placeholder="Escriba el nombre de la nota" class="form-control">
+													</div>
+												</div>
+
+												<!-- Message body -->
+												<div class="form-group">
+													<label class="col-12 control-label no-padding titulo" for="message">Descripción</label>
+
+													<div class="col-12 no-padding">
+														<textarea class="form-control" id="message" name="message" placeholder="Escriba el contenido de la nota" rows="5"></textarea>
+													</div>
+												</div>
+
+												<!-- Form actions -->
+												<div class="form-group">
+													<div class="col-12 widget-right no-padding">
+														<a href="./index.html"><button type="button" class="btn btn-success">Crear nota</button></a>
+													</div>
+												</div>
+											</fieldset>
+										</form>
 									</div>
 								</div>
 
-							</div>
-							<div class="col-md-12 col-lg-3">
 
-								<div class="card mb-4">
-									<div class="card-block">
-										<h3 class="card-title">Titulo 2</h3>
-										<p>Contenido de la nota</p>
-											<button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
-											<button type="button" class="btn btn-info btn-xs"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</button>
-									</div>
-								</div>
 							</div>
-							<div class="col-md-12 col-lg-3">
-
-								<div class="card mb-4">
-									<div class="card-block">
-										<h3 class="card-title">Titulo 3</h3>
-										<p>Contenido de la nota</p>
-												<button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
-												<button type="button" class="btn btn-info btn-xs"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</button>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12 col-lg-3">
-
-								<div class="card mb-4">
-									<div class="card-block">
-										<h3 class="card-title">Titulo 4</h3>
-										<p>Contenido de la nota</p>
-										<button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</button>
-										<button type="button" class="btn btn-info btn-xs"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</button>
-									</div>
-								</div>
-							</div>
-
 						</section>
 
 					</div>
@@ -149,17 +140,6 @@
     <script src="js/easypiechart-data.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/custom.js"></script>
-    <script>
-	    window.onload = function () {
-	var chart1 = document.getElementById("line-chart").getContext("2d");
-	window.myLine = new Chart(chart1).Line(lineChartData, {
-	responsive: true,
-	scaleLineColor: "rgba(0,0,0,.2)",
-	scaleGridLineColor: "rgba(0,0,0,.05)",
-	scaleFontColor: "#c5c7cc"
-	});
-};
-	</script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 
